@@ -22,4 +22,5 @@ RemotelyBackend::Application.configure do
   # Raise an error on page load if there are pending migrations
   config.active_record.migration_error = :page_load
 
+  config.middleware.delete Rack::Lock
 end
