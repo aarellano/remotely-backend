@@ -9,19 +9,22 @@ gem 'mysql2'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+gem 'websocket-rails'
+
+group :development, :test do
+	gem 'factory_girl_rails'
+	gem 'rspec-rails'
+	gem 'debugger', :require => 'ruby-debug'
+	gem 'zeus'
+	gem 'guard-rspec'
+	gem 'rspec-nc'
+	gem 'pry-rails'
+end
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
 # Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'unicorn'
