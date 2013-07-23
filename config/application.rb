@@ -27,5 +27,12 @@ module RemotelyBackend
 
     # Disable the asset pipeline.
     config.assets.enabled = false
+
+    # Disable generation of helpers, javascripts, css, and views
+    config.generators do |generate|
+      generate.helper false
+      generate.assets false
+    end
+
   end
 end
