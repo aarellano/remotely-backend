@@ -16,7 +16,8 @@ class ChatController < WebsocketRails::BaseController
   def user_msg(ev, msg)
     p msg
     broadcast_message ev, {
-      user_name:  connection_store[:user][:user_name],
+      # user_name:  connection_store[:user][:user_name],
+      user_name:  'user',
       received:   Time.now.to_s(:short),
       msg_body:   ERB::Util.html_escape(msg)
       }
